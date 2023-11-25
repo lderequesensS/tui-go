@@ -110,10 +110,12 @@ func main() {
 			currItem -= 1
 			currItem = currItem % contactsList.GetItemCount()
 			contactsList.SetCurrentItem(currItem)
+			setConcatText(&contacts[currItem])
 		} else if event.Key() == tcell.KeyDown {
 			currItem += 1
 			currItem = currItem % contactsList.GetItemCount()
 			contactsList.SetCurrentItem(currItem)
+			setConcatText(&contacts[currItem])
 		}
 		return event
 	})
